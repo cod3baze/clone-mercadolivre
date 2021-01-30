@@ -25,7 +25,7 @@ const Product: React.FC = () => {
       <Panel>
         <Column>
           <Gallery>
-            <img src={tshirtImage} alt="T-Shirt" />
+            <img draggable={false} src={tshirtImage} alt="T-Shirt" />
           </Gallery>
 
           <Info />
