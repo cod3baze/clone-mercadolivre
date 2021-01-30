@@ -1,7 +1,17 @@
 import React from 'react';
 
-function App() {
-  return <h1>Rocketseat</h1>;
+// COMPONENTs
+import Layout from './components/Layout';
+// STATICs
+import GlobalStyles from './styles/GlobalStyles'
+
+const App = () => {
+  return (
+    <>
+      <Layout />
+      <GlobalStyles />
+    </>
+  );
 }
 
 export default App;
