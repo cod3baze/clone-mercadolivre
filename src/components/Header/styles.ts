@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { HiOutlineSearch, HiOutlineUserCircle } from "react-icons/hi";
+import { FiShoppingCart } from "react-icons/fi";
 
 export const Container = styled.div`
   width: 100%;
@@ -53,6 +54,11 @@ export const Controller = styled.div`
       border-left: 2px solid rgba(0, 0, 0, 0.2);
     }
   }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const SearchIcon = styled(HiOutlineSearch)`
@@ -73,6 +79,23 @@ export const UserGroup = styled.div`
 `;
 
 export const UserIcon = styled(HiOutlineUserCircle)`
+  flex-shrink: 0;
+  height: 26px;
+  width: 26px;
+`;
+
+export const CardGroup = styled.div`
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+  border: 0.5px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CardIcon = styled(FiShoppingCart)`
   flex-shrink: 0;
   height: 26px;
   width: 26px;

@@ -7,6 +7,8 @@ import {
   SearchIcon,
   UserGroup,
   UserIcon,
+  CardGroup,
+  CardIcon,
 } from "./styles";
 
 const Header: React.FC = () => {
@@ -29,9 +31,15 @@ const Header: React.FC = () => {
           </button>
         </form>
 
-        <UserGroup>
-          <UserIcon />
-        </UserGroup>
+        <div>
+          <UserGroup>
+            <UserIcon />
+          </UserGroup>
+
+          <CardGroup>
+            <CardIcon />
+          </CardGroup>
+        </div>
       </Controller>
     </Container>
   );
