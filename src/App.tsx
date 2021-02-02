@@ -1,17 +1,28 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // COMPONENTs
-import Layout from './components/Layout';
+import Home from "./Pages/Home";
+import ProductInfo from "./Pages/ProductInfo";
 // STATICs
-import GlobalStyles from './styles/GlobalStyles'
+import GlobalStyles from "./styles/GlobalStyles";
 
 const App = () => {
   return (
     <>
-      <Layout />
-      <GlobalStyles />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/product_info/:product_name/:product_id"
+            element={<ProductInfo />}
+          />
+        </Routes>
+
+        <GlobalStyles />
+      </BrowserRouter>
     </>
   );
-}
+};
 
 export default App;

@@ -14,7 +14,7 @@ import {
 const Header: React.FC = () => {
   return (
     <Container>
-      <Logo>NWoFicial</Logo>
+      <Logo href="/">NWoFicial</Logo>
 
       <Controller>
         <form action="#">
@@ -35,6 +35,8 @@ const Header: React.FC = () => {
           <UserGroup>
             <UserIcon />
           </UserGroup>
+
+          <div id="separator"></div>
 
           <CardGroup>
             <CardIcon />
