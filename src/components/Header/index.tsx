@@ -1,24 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Container,
   Logo,
   Controller,
   SearchIcon,
-  UserGroup,
-  UserIcon,
   CardGroup,
   CardIcon,
 } from "./styles";
 
+interface Ielement {
+  preventDefault: () => void;
+}
+
 const Header: React.FC = () => {
+  const [querySearch, setQuerySearch] = useState("");
+
+  function handleSubmit(event: Ielement) {
+    event.preventDefault();
+
+    window.location.href = `/search?query_search=${querySearch}`;
+  }
+
   return (
     <Container>
-      <Logo href="/">NWoFicial</Logo>
+      <Logo href="/">STORE_</Logo>
 
       <Controller>
         <form action="#">
           <input
+            value={querySearch}
+            onChange={(e) => setQuerySearch(e.target.value)}
             required
             type="search"
             id="search"
@@ -26,19 +38,15 @@ const Header: React.FC = () => {
             placeholder="Busque por camisetas e muito mais"
           />
 
-          <button type="submit">
+          <button type="submit" onClick={handleSubmit}>
             <SearchIcon />
           </button>
         </form>
 
         <div>
-          <UserGroup>
-            <UserIcon />
-          </UserGroup>
-
           <div id="separator"></div>
 
-          <CardGroup>
+          <CardGroup href="/cart">
             <CardIcon />
           </CardGroup>
         </div>

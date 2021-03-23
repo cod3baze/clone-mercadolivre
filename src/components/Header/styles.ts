@@ -4,8 +4,8 @@ import { FiShoppingCart } from "react-icons/fi";
 
 export const Container = styled.div`
   width: 100%;
-  height: 48px;
-  background: var(--color-header);
+  height: 60px;
+  background: var(--color-header-master-y);
   border-bottom: 1px solid var(--color-border);
 
   display: flex;
@@ -19,6 +19,7 @@ export const Logo = styled.a`
   max-width: 200px;
   padding: 6px 10px;
   text-decoration: none;
+  color: var(--hilight-border);
 `;
 
 export const Controller = styled.div`
@@ -29,7 +30,7 @@ export const Controller = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   > form {
     display: flex;
@@ -53,6 +54,11 @@ export const Controller = styled.div`
     > button {
       padding: 12px;
       border-left: 2px solid rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(90%);
+      }
     }
   }
 
@@ -75,29 +81,7 @@ export const SearchIcon = styled(HiOutlineSearch)`
   width: 16px;
 `;
 
-export const UserGroup = styled.button`
-  width: 32px;
-  height: 32px;
-
-  border-radius: 50%;
-  /* border: 0.5px solid rgba(0, 0, 0, 0.3); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  &:hover {
-    background: var(--color-header-x);
-  }
-`;
-
-export const UserIcon = styled(HiOutlineUserCircle)`
-  flex-shrink: 0;
-  height: 28px;
-  width: 28px;
-`;
-
-export const CardGroup = styled.button`
+export const CardGroup = styled.a`
   width: 32px;
   height: 32px;
   padding: 5px;
@@ -106,18 +90,16 @@ export const CardGroup = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: var(--color-primary);
+  transition: color 1s ease-in;
 
   &:hover {
-    background: var(--color-header-x);
+    color: var(--color-header-master);
   }
 `;
 
 export const CardIcon = styled(FiShoppingCart)`
   flex-shrink: 0;
-  height: 26px;
-  width: 26px;
-
-  &:hover {
-    opacity: 8%;
-  }
+  height: 23px;
+  width: 23px;
 `;
